@@ -3,7 +3,7 @@ const config = require('../config');
 
 test('DELETE /warehouses/:id: status should be 204 for successful deletion', async () => {
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/warehouses/1`, {
+		 await fetch(`${config.API_URL}/api/v1/warehouses/1`, {
 			method: 'DELETE',
 		});
 		expect(response.status).toBe(204)
