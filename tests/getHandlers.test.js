@@ -8,10 +8,10 @@ test('GET /warehouses: status should be 200', async () => {
             method: 'GET',
         });
         // Check status code
-        expect(response.status).toBe(200);
     } catch (error) {
         console.error(error);
     }
+    expect(response.status).toBe(200)
 });
 
 test('GET /warehouses: response should contain a non-empty array of warehouses', async () => {
@@ -22,9 +22,9 @@ test('GET /warehouses: response should contain a non-empty array of warehouses',
         });
         const data = await response.json();
         // Check that the response is an array and not empty
-        expect(Array.isArray(data)).toBe(true);
-        expect(data.length).toBeGreaterThan(0);
     } catch (error) {
         console.error(error);
     }
+    expect(Array.isArray(data)).toBe(true);
+    expect(data.length).toBeGreaterThan(0);
 });

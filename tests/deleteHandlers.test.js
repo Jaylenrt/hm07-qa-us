@@ -6,10 +6,10 @@ test('DELETE /warehouses/:id: status should be 204 for successful deletion', asy
 		 await fetch(`${config.API_URL}/api/v1/warehouses/1`, {
 			method: 'DELETE',
 		});
-		expect(response.status).toBe(204)
 	} catch (error) {
 		console.error(error);
 	}
+	expect(response.status).toBe(204)
 });
 
 test('DELETE /warehouses/:id: warehouse should no longer exist', async () => {
@@ -25,4 +25,5 @@ test('DELETE /warehouses/:id: warehouse should no longer exist', async () => {
 	} catch (error) {
 		console.error(error);
 	}
+	expect(response.status).toBe(404)
 });
